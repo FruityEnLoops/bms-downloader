@@ -8,7 +8,8 @@ echo "---- Download Size : Aprox. 118.3GB"
 echo "2. Download a single pack"
 read choice
 clear
-if $choice == 1 (    
+if [ $choice -eq 1 ]
+then
     wget -i linklists/bof2009 -c -P bof2009
     wget -i linklists/bof2010 -c -P bof2010
     wget -i linklists/bof2011 -c -P bof2011
@@ -23,8 +24,9 @@ if $choice == 1 (
     echo "Press enter to continue..."
     read a
     exit
-)
-if $choice == 2 (
+fi
+if [ $choice -eq 2 ]
+then
     echo "1. BOF2009 (3914 MiB)"
     echo "2. BOF2010 (5817 MiB)"
     echo "3. BOF2011 (9082 MiB)"
@@ -36,41 +38,51 @@ if $choice == 2 (
     echo "9. BOFU2017 (20 GiB)"
     echo "10. G2R2018 (18 GiB)"
     read pack
-    if $pack == 1 (
+    if [ $pack -eq 1 ]
+    then
         wget -i linklists/bof2009 -c -P bof2009
-    )
-    if $pack == 2 (
+    fi
+    if [ $pack -eq 2 ]
+    then
         wget -i linklists/bof2010 -c -P bof2010
-    )
-    if $pack == 3 (
+    fi
+    if [ $pack -eq 3 ]
+    then
         wget -i linklists/bof2011 -c -P bof2011
-    )
-    if $pack == 4 (
+    fi
+    if [] $pack -eq 4 ]
+    then
         wget -i linklists/bof2012 -c -P bof2012
-    )
-    if $pack == 5 (
+    fi
+    if [ $pack -eq 5 ]
+    then
         wget -i linklists/bof2013 -c -P bof2013
-    )
-    if $pack == 6 (
+    fi
+    if [ $pack -eq 6 ]
+    then
         wget -i linklists/g2r2014 -c -P g2r2014
-    )
-    if $pack == 7 (
+    fi
+    if [ $pack -eq 7 ]
+    then
         wget -i linklists/bofu2015 -c -P bofu2015
-    )
-    if $pack == 8 (
+    fi
+    if [ $pack -eq 8 ]
+    then
         wget -i linklists/bofu2016 -c -P bofu2016
-    )
-    if $pack == 9 (
+    fi
+    if [ $pack -eq 9 ]
+    then
         wget -i linklists/bofu2017 -c -P bofu2017
-    )
-    if $pack == 10 (
+    fi
+    if [ $pack -eq 10 ]
+    then
         wget -i linklists/g2r2018 -c -P g2r2018
-    )
+    fi
     echo "Finished downloading or incorect input."
     echo "Press enter to continue..."
     read a
     exit
-)
+fi
 echo "Incorect input. Or, I messed up while coding this."
 echo "Press enter to continue..."
 read a
