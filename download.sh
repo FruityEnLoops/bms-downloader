@@ -50,7 +50,7 @@ then
     then
         wget -i linklists/bof2011 -c -P bof2011
     fi
-    if [] $pack -eq 4 ]
+    if [ $pack -eq 4 ]
     then
         wget -i linklists/bof2012 -c -P bof2012
     fi
